@@ -1,4 +1,5 @@
 //Obtenemos referencia de los elementos
+const nameInput = document.getElementById("name");
 const ageInput = document.getElementById("age");
 const excBtn = document.getElementById("exec-btn");
 const errorText = document.getElementById("error-text");
@@ -10,6 +11,7 @@ excBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
   //Tomamos el valor del input
+  const name = nameInput.value;
   let age = parseInt(ageInput.value);
 
   //Reseteamos los mensajes
@@ -29,9 +31,9 @@ excBtn.addEventListener("click", (event) => {
     //Una vez validado, hacemos la evaluación y le damos un mensaje al usuario
     errorText.textContent = "";
     if (age > 18) {
-      resultText.textContent = `Tienes ${age}, eres mayor de edad!`;
+      resultText.textContent = `Hola ${name}, tienes ${age}, eres mayor de edad!`;
     } else {
-      resultText.textContent = `Tienes ${age}, eres menor de edad!`;
+      resultText.textContent = `Hola ${name}, tienes ${age}, eres menor de edad!`;
     }
   }
 });
