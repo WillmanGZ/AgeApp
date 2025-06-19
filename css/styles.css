@@ -1,3 +1,4 @@
+/* Importing the Inter font */
 @font-face {
   font-family: "Inter";
   src: url(/assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
@@ -9,4 +10,85 @@
   box-sizing: border-box;
 
   font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f0f2f5;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex-grow: 1;
+}
+
+#ageCalculator {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#ageForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ageCalculator {
+    width: 95%;
+  }
+  #ageForm {
+    width: 100%;
+  }
 }
