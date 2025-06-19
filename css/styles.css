@@ -1,9 +1,10 @@
-/* Importing the Inter font */
+/* Importamos la fuente inter */
 @font-face {
   font-family: "Inter";
   src: url(/assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
 
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Estilos del body */
 body {
   min-width: 185px;
   height: 100vh;
@@ -22,6 +24,7 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Estilos del header */
 header {
   width: 100%;
   display: flex;
@@ -33,6 +36,7 @@ header {
   border-bottom: 1px solid #dee2e6;
 }
 
+/* Estilos del main */
 main {
   display: flex;
   flex-direction: column;
@@ -42,6 +46,7 @@ main {
   flex-grow: 1;
 }
 
+/* Estilos de la sección para calcular la edad*/
 #ageCalculator {
   max-width: 600px;
   display: flex;
@@ -56,6 +61,7 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos del formulario para calcular la edad*/
 #ageForm {
   width: 90%;
   display: flex;
@@ -63,6 +69,20 @@ main {
   gap: 0.5rem;
 }
 
+/* Estilos para los mensajes del formulario */
+#error-text {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #dc3545;
+}
+
+#result-text {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #495057;
+}
+
+/* Estilos para el pie de página */
 footer {
   width: 100%;
   text-align: center;
@@ -72,6 +92,7 @@ footer {
   border-top: 1px solid #dee2e6;
 }
 
+/* Animación de degradado de opacidad */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -80,6 +101,8 @@ footer {
     opacity: 1;
   }
 }
+
+/* Estilos responsivos */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
