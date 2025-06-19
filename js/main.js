@@ -6,9 +6,9 @@ const errorText = document.getElementById("error-text");
 const resultText = document.getElementById("result-text");
 
 //Añadimos interactividad al boton
-excBtn.addEventListener("click", (event) => {
+excBtn.addEventListener("click", (e) => {
   //Prevenimos el evento por defecto
-  event.preventDefault();
+  e.preventDefault();
 
   //Tomamos el valor del input
   const name = nameInput.value;
@@ -17,6 +17,12 @@ excBtn.addEventListener("click", (event) => {
   //Reseteamos los mensajes
   errorText.textContent = "";
   resultText.textContent = "";
+
+  //Validamos que haya un nombre
+  if (name == "") {
+    errorText.textContent = "Por favor, digite un nombre";
+    return;
+  }
 
   //Validamos que sea un número válido y que sea un número entre 0 y 100
   if (isNaN(age)) {
@@ -31,9 +37,9 @@ excBtn.addEventListener("click", (event) => {
     //Una vez validado, hacemos la evaluación y le damos un mensaje al usuario
     errorText.textContent = "";
     if (age > 18) {
-      resultText.textContent = `Hola ${name}, tienes ${age}, eres mayor de edad!`;
+      resultText.textContent = `Hola ${name}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`;
     } else {
-      resultText.textContent = `Hola ${name}, tienes ${age}, eres menor de edad!`;
+      resultText.textContent = `Hola ${name}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`;
     }
   }
 });
