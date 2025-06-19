@@ -69,6 +69,41 @@ main {
   gap: 0.5rem;
 }
 
+/* Estilos para el label del formulario */
+#ageForm label {
+  font-size: 1rem; 
+}
+
+/* Estilos para los inputs del formulario */
+#ageForm input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Estilos para el botón del formulario */
+#ageForm button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+#ageForm button:hover {
+  background-color: #0056b3;
+}
+
+#ageForm button:active {
+  background-color: #004085;
+}
+
 /* Estilos para los mensajes del formulario */
 #error-text {
   font-size: 0.875rem;

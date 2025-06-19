@@ -12,6 +12,10 @@ excBtn.addEventListener("click", (event) => {
   //Tomamos el valor del input
   let age = parseInt(ageInput.value);
 
+  //Reseteamos los mensajes
+  errorText.textContent = "";
+  resultText.textContent = "";
+
   //Validamos que sea un número válido y que sea un número entre 0 y 100
   if (isNaN(age)) {
     ageInput.value = null;
