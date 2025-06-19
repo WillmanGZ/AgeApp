@@ -1,0 +1,153 @@
+/* Importamos la fuente inter */
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* Estilos del body */
+body {
+  min-width: 185px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f0f2f5;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilos del header */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Estilos del main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex-grow: 1;
+}
+
+/* Estilos de la sección para calcular la edad*/
+#ageCalculator {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del formulario para calcular la edad*/
+#ageForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Estilos para el label del formulario */
+#ageForm label {
+  font-size: 1rem; 
+}
+
+/* Estilos para los inputs del formulario */
+#ageForm input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Estilos para el botón del formulario */
+#ageForm button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+#ageForm button:hover {
+  background-color: #0056b3;
+}
+
+#ageForm button:active {
+  background-color: #004085;
+}
+
+/* Estilos para los mensajes del formulario */
+#error-text {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #dc3545;
+}
+
+#result-text {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #495057;
+}
+
+/* Estilos para el pie de página */
+footer {
+  width: 100%;
+  text-align: center;
+
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Animación de degradado de opacidad */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ageCalculator {
+    width: 95%;
+  }
+  #ageForm {
+    width: 100%;
+  }
+}
